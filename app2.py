@@ -22,7 +22,6 @@ image = (
          # "",    
     )
            
-    print("Installing Dependencies...")
     .run_function(
         install_comfyui_dependencies,
         volumes={"/root/workspace": vol}
@@ -38,4 +37,5 @@ image = (
 def run():
     print("Dependencies Installed...✅")
   
+
 
