@@ -99,4 +99,5 @@ def run():
             f"{dl} --out=Qwen-Image-Edit-2509-Lightning-8steps-V1.0-bf16.safetensors https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Edit-2509/Qwen-Image-Edit-2509-Lightning-8steps-V1.0-bf16.safetensors"
             )
     else:
-        print("ComfyUI Installed")
+        print("ComfyUI Installed✅")
+
