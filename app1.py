@@ -1,5 +1,5 @@
 import modal
-import os
+import os, time
 
 GPU_TYPE = os.environ.get("GPU_TYPE", "T4")  #NEW
 app = modal.App("setup-step1")
@@ -13,7 +13,7 @@ image = (
 @app.function(
     image=image,
     gpu=GPU_TYPE,
-    timeout=7200,  # 2 hours
+    timeout=3*3600 ,  # 3 hour
     volumes={"/root/workspace": vol},
 )
 def run():
@@ -99,5 +99,6 @@ def run():
             f"{dl} --out=Qwen-Image-Edit-2509-Lightning-8steps-V1.0-bf16.safetensors https://huggingface.co/lightx2v/Qwen-Image-Lightning/resolve/main/Qwen-Image-Edit-2509/Qwen-Image-Edit-2509-Lightning-8steps-V1.0-bf16.safetensors"
             )
     else:
-        print("ComfyUI Installed✅")
+        print("ComfyUI Installed...✅")
+
 
